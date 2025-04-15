@@ -2,4 +2,36 @@
 GET http://localhost:3000/produtos
 Content-Type: application/json
 
+
+### Cria um produto
+POST http://localhost:3000/produtos
+Content-Type: application/json
+Authorization: Bearer <seu_token_jwt>
+
+{
+  "nome": "Nike Air Zoom Pegasus 38",
+  "preco": 549.90,
+  "tamanho": [39, 40, 41, 42],
+  "cor": "Azul",
+  "quantidadeEstoque": 50,
+  "descricao": "Tênis confortável e ideal para corridas de longa distância."
+}
+
+### Obtem produto por ID
+GET http://localhost:3000/produtos/1
+Authorization: Bearer <seu_token_jwt>
+
+### Atualiza um produto
+PUT http://localhost:3000/produtos/1
+Content-Type: application/json
+Authorization: Bearer <seu_token_jwt>
+
+{
+  "nome": "Nike Air Zoom Pegasus 39",
+  "preco": 569.90,
+  "quantidadeEstoque": 55
+}
+
 ###
+DELETE http://localhost:3000/produtos/1
+Authorization: Bearer <seu_token_jwt>
